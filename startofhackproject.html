@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="hackproject.css">
+<html>
+<body>
+<div>
+<h1>This will revolutionize words</h1>
+
+<form> 
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+
+
+<!--this is where  you will enter your text-->
+<!-- form>
+<textarea    onkeyup ="showHint(this.value) id="help-me" rows="4" cols="50">
+enter your text
+</textarea>
+</form> -->
+<br>
+<br>
+<!-- this is where you tell the machine to submit -->
+<form>
+<button id="p2"  form action  type="button" >Click Me!</button>
+</form>
+
+<br>
+<h1>see the acronym:</h1>
+<p id="p1">Hello World!</p>
+<!-- this is where you will see the acronyms -->
+<p>Acronyms: <span id="txtHint"></span></p>
+<!-- <script>
+var userAnswer = prompt("enter in the text you want to simplify");//document.getElementById("help-me").innerHTML;
+//this code will search for 
+var hope = " "+userAnswer;
+//var userAnswer = prompt("enter in your text and acronym");
+console.log(hope);
+var j= hope.length;
+ var vari = [];
+var acronym=[];
+
+for(i=0;i<(j+1);i++){
+    console.log(i);
+if(hope[i]==hope[i].toUpperCase() && hope[i] != undefined){
+    var k = i+1;
+    console.log(k);
+    if(hope[k]==hope[k].toUpperCase() && hope[k] != undefined){
+       
+        while(hope[i] != undefined){
+            i++;
+            console.log(i); 
+            
+           
+            vari.push(hope[i]);
+        }
+    }
+}
+}
+console.log(vari);
+//I think vari should be an array
+//it should go through each element in the array and match it to elements in a database
+ var  dataarray ={LCM: 'leastcommondenominator',GCF:'Greatest Common Factor',HTTP:'Hypertextarray'};
+ var stringe = vari.join("");
+ console.log(stringe);
+var answer = dataarray[stringe];
+console.log(answer);
+
+
+alert(answer);
+
+
+
+
+document.getElementById("p1").innerHTML = answer;
+</script> -->
+<!-- script for input stuff -->
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET", "hackacronymphp.php?userAnswer=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+
+
+
+
+</body>
+</div>
+
+
+
+
+<div id="left">
+
+<p>These link to more reading help</p>
+
+
+
+
+
+
+</div>
+</html>

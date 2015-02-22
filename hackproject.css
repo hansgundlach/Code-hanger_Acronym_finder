@@ -1,0 +1,12 @@
+#p2 {
+  border-color : #2989d8;
+  background : #2989d8;
+  background: -moz-linear-gradient(top, #2989d8 0%, #1e5799 100%);
+  background: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0%,#2989d8), color-stop(100%,#1e5799));
+  background: -webkit-linear-gradient(top, #2989d8 0%,#1e5799 100%);
+  background: -o-linear-gradient(top, #2989d8 0%,#1e5799 100%);
+  background: -ms-linear-gradient(top, #2989d8 0%,#1e5799 100%);
+  background: linear-gradient(top, #2989d8 0%,#1e5799 100%);
+  
+}
